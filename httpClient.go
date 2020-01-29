@@ -17,7 +17,7 @@ func main ()  {
 
 func getRequest (wait *sync.WaitGroup) {
 	println("getRequest start")
-	resp, err := http.Get("https://dev-admin-friendstime.snak.kakaogame.com:8080/system/healthCheck")
+	resp, err := http.Get("input url")
 	errorHandler(err)
 	data, err := ioutil.ReadAll(resp.Body)
 	errorHandler(err)
@@ -29,7 +29,7 @@ func getRequest (wait *sync.WaitGroup) {
 
 func getRequest2 (wait *sync.WaitGroup) {
 	println("getRequest2 start")
-	devUrl := "https://dev-admin-friendstime.snak.kakaogame.com:8080/system/healthCheck"
+	devUrl := "input url"
 	req, err := http.NewRequest("GET", devUrl, nil)
 	errorHandler(err)
 
